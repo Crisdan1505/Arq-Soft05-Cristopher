@@ -1,0 +1,14 @@
+﻿using App_Citas.Models;
+using CitasApp.Models;
+
+namespace CitasApp.Interfaces
+{
+    public interface IPacienteRepository
+    {
+        List<Paciente> ObtenerTodos();
+        Paciente? ObtenerPorId(int id);
+        void Agregar(Paciente paciente);
+        void Actualizar(Paciente paciente);
+        void Eliminar(int id);
+    }
+}

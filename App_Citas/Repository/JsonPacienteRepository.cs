@@ -27,7 +27,7 @@ namespace CitasApp.Repositories
         public Paciente? ObtenerPorId(int id) => Leer().FirstOrDefault(p => p.Id == id);
 
         public void Agregar(Paciente paciente)
-        {
+        {   
             var lista = Leer();
             paciente.Id = lista.Any() ? lista.Max(p => p.Id) + 1 : 1;
             lista.Add(paciente);

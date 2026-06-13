@@ -1,7 +1,22 @@
+using App_Citas.Domain.Ports;
+using App_Citas.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddRazorOptions(options =>
+    {
+        options.ViewLocationFormats.Clear();
+
+        options.ViewLocationFormats.Add("/Presentation/Views/{1}/{0}.cshtml");
+        options.ViewLocationFormats.Add("/Presentation/Views/Shared/{0}.cshtml");
+    });
+
+// Register repositories
+builder.Services.AddSingleton<IPacienteRepository, JsonPacienteRepository>();
+builder.Services.AddSingleton<IMedicoRepository, JsonMedicoRepository>();
+builder.Services.AddSingleton<ICitaRepository, JsonCitaRepository>();
 
 var app = builder.Build();
 
@@ -9,7 +24,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -24,6 +38,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();

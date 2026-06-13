@@ -41,6 +41,15 @@ Este proyecto fue desarrollado por **Cristopher Maximiliano Euan Pool**, estudia
 
 El objetivo principal de esta aplicación es demostrar la creación de un sistema web funcional para la gestión de citas médicas, aplicando buenas prácticas de organización de código, separación de capas, uso de controladores, vistas, servicios, repositorios e interfaces.
 
+## Capturas de la app funcionando
+1.<img width="1915" height="1017" alt="image" src="https://github.com/user-attachments/assets/c9e7734c-ad78-4339-bb08-45ba748818e1" />
+2.<img width="1901" height="1018" alt="image" src="https://github.com/user-attachments/assets/f284307b-403f-48f2-8239-f0d5cf7b8edd" />
+3.<img width="1893" height="1013" alt="image" src="https://github.com/user-attachments/assets/b279c15b-06ac-4335-90dc-34639f06792f" />
+4.<img width="1895" height="918" alt="image" src="https://github.com/user-attachments/assets/f664e296-1133-4368-98b1-f54d0d848ef0" />
+5.<img width="1893" height="922" alt="image" src="https://github.com/user-attachments/assets/19f71870-3ab7-4c52-8824-9242b7d6b916" />
+
+
+
 ## Declaración de uso de IA
 
 Durante el desarrollo de este proyecto se utilizó inteligencia artificial como herramienta de apoyo para orientar la organización del código, mejorar la estructura del proyecto, corregir errores de compilación, ajustar rutas, documentar cambios y proponer mejoras visuales en la interfaz.

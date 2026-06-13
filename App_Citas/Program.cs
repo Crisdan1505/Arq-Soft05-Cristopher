@@ -1,3 +1,4 @@
+using App_Citas.Application.Services;
 using App_Citas.Domain.Ports;
 using App_Citas.Infrastructure.Repositories;
 
@@ -17,6 +18,11 @@ builder.Services.AddControllersWithViews()
 builder.Services.AddSingleton<IPacienteRepository, JsonPacienteRepository>();
 builder.Services.AddSingleton<IMedicoRepository, JsonMedicoRepository>();
 builder.Services.AddSingleton<ICitaRepository, JsonCitaRepository>();
+
+// Register application services
+builder.Services.AddScoped<PacienteService>();
+builder.Services.AddScoped<MedicoService>();
+builder.Services.AddScoped<CitaService>();
 
 var app = builder.Build();
 

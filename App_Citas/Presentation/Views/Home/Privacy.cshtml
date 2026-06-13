@@ -1,6 +1,60 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Política de privacidad";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<section class="page-container">
+    <div class="page-header">
+        <div>
+            <a asp-controller="Home" asp-action="Index" class="btn-back">Inicio</a>
+            <h1 class="page-title">Política de Privacidad</h1>
+            <p class="page-subtitle">
+                Información sobre el uso responsable de los datos dentro del sistema de gestión de citas médicas.
+            </p>
+        </div>
+    </div>
+
+    <div class="form-card">
+        <h2>Uso de la información</h2>
+        <p>
+            Esta aplicación fue desarrollada con fines académicos para administrar información básica relacionada con pacientes,
+            médicos y citas. Los datos registrados dentro del sistema se utilizan únicamente para simular el funcionamiento de
+            una plataforma de gestión clínica.
+        </p>
+    </div>
+
+    <div class="form-card mt-4">
+        <h2>Datos manejados por la aplicación</h2>
+        <p>
+            El sistema puede manejar datos como nombres, apellidos, correos electrónicos, teléfonos, especialidades médicas,
+            números de licencia, fechas, horarios y motivos de consulta.
+        </p>
+        <p>
+            Estos datos se utilizan solamente para mostrar, organizar y administrar los registros dentro de la aplicación.
+        </p>
+    </div>
+
+    <div class="form-card mt-4">
+        <h2>Protección de datos</h2>
+        <p>
+            La aplicación busca mantener una estructura ordenada y clara para el manejo de la información. Al tratarse de un
+            proyecto académico, no debe utilizarse con datos médicos reales o información sensible de pacientes reales.
+        </p>
+    </div>
+
+    <div class="form-card mt-4">
+        <h2>Responsabilidad académica</h2>
+        <p>
+            Este proyecto fue elaborado por <strong>Cristopher Maximiliano Euan Pool</strong>, estudiante de tercer cuatrimestre
+            en el <strong>Tecnológico De Software</strong>, como parte de una práctica académica guiada por el profesor
+            <strong>Javier Pedrozo Romero</strong>.
+        </p>
+    </div>
+
+    <div class="form-card mt-4">
+        <h2>Finalidad del proyecto</h2>
+        <p>
+            El objetivo de esta aplicación es demostrar el uso de ASP.NET Core MVC, arquitectura hexagonal, separación de capas,
+            controladores, vistas, entidades, servicios, puertos y repositorios dentro de un sistema de citas.
+        </p>
+    </div>
+</section>

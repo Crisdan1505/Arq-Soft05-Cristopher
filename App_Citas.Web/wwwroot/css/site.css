@@ -1,0 +1,884 @@
+
+/* ==============================
+   Estilo personalizado App_Citas
+   ============================== */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #14b8a6;
+    --dark-color: #1f2937;
+    --light-bg: #f4f7fb;
+    --card-bg: #ffffff;
+    --text-muted: #6b7280;
+    --danger-color: #dc2626;
+    --success-color: #16a34a;
+    --warning-color: #f59e0b;
+}
+
+body {
+    background: linear-gradient(135deg, #eef5ff 0%, #f8fbff 45%, #ecfeff 100%);
+    color: var(--dark-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.15) !important;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+    .nav-link:hover {
+        color: var(--primary-color) !important;
+        transform: translateY(-1px);
+    }
+
+.dropdown-menu {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    padding: 10px;
+}
+
+.dropdown-item {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+    .dropdown-item:hover {
+        background: #eaf1ff;
+        color: var(--primary-color);
+    }
+
+/* Contenedores */
+.page-container {
+    padding: 30px 0;
+}
+
+.page-header {
+    background: linear-gradient(135deg, #2563eb, #14b8a6);
+    color: white;
+    padding: 32px;
+    border-radius: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    margin: 0;
+    opacity: 0.92;
+    font-size: 1rem;
+}
+
+/* Tarjetas */
+.form-card,
+.detalle-card,
+.table-card {
+    background: var(--card-bg);
+    border-radius: 22px;
+    padding: 26px;
+    box-shadow: 0 15px 35px rgba(31, 41, 55, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+    .form-card h2,
+    .detalle-card h2 {
+        font-weight: 800;
+        color: var(--dark-color);
+        margin-bottom: 16px;
+    }
+
+    .form-card p {
+        color: var(--text-muted);
+        line-height: 1.7;
+    }
+
+/* Botones */
+.btn {
+    border-radius: 12px;
+    font-weight: 700;
+    padding: 10px 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #14b8a6);
+    border: none;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #1f2937;
+    border: none;
+}
+
+.btn-danger {
+    background: var(--danger-color);
+    border: none;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+    .btn-outline-primary:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+    .btn-back:hover {
+        color: white;
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+/* Formularios */
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-span {
+    grid-column: span 2;
+}
+
+.form-label {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 6px;
+}
+
+.form-control-custom,
+.form-control,
+.form-select {
+    border-radius: 12px;
+    border: 1px solid #dbe3ef;
+    padding: 11px 14px;
+}
+
+    .form-control-custom:focus,
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+    }
+
+.form-actions {
+    margin-top: 22px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Tablas */
+.table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.search-box {
+    flex: 1;
+}
+
+.modern-table {
+    margin-bottom: 0;
+}
+
+    .modern-table thead {
+        background: #eef5ff;
+    }
+
+    .modern-table th {
+        color: var(--dark-color);
+        font-weight: 800;
+        border-bottom: none;
+        padding: 16px;
+    }
+
+    .modern-table td {
+        padding: 16px;
+        vertical-align: middle;
+    }
+
+    .modern-table tbody tr {
+        transition: all 0.2s ease-in-out;
+    }
+
+        .modern-table tbody tr:hover {
+            background: #f8fbff;
+        }
+
+/* Avatares */
+.name-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+}
+
+.avatar-lg {
+    width: 64px;
+    height: 64px;
+    font-size: 1.4rem;
+}
+
+.avatar-blue {
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+}
+
+.avatar-green {
+    background: linear-gradient(135deg, #14b8a6, #5eead4);
+}
+
+/* Detalles */
+.profile-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.detalle-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eef2f7;
+}
+
+    .detalle-row:last-child {
+        border-bottom: none;
+    }
+
+.detalle-label {
+    font-weight: 800;
+    color: var(--dark-color);
+}
+
+.detalle-value {
+    color: var(--text-muted);
+}
+
+/* Estados */
+.status-badge {
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.status-pendiente {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-confirmada {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-cancelada {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.ca-badge-info {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+/* Footer corregido */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 0;
+}
+
+main {
+    min-height: 70vh;
+}
+
+.footer {
+    position: static !important;
+    bottom: auto !important;
+    width: 100%;
+    white-space: normal;
+    line-height: normal;
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(37, 99, 235, 0.12);
+    padding: 20px 0;
+    margin-top: 50px;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+    .footer a {
+        color: #2563eb;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-span {
+        grid-column: span 1;
+    }
+
+    .table-toolbar {
+        flex-direction: column;
+    }
+
+    .detalle-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+/* ==============================
+   Animaciones suaves App_Citas
+   ============================== */
+
+/* Entrada general de la página */
+.page-container {
+    animation: fadeInPage 0.7s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación del encabezado */
+.page-header {
+    animation: slideDownHeader 0.8s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes slideDownHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Brillo suave en encabezados */
+.page-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, 0.25), transparent );
+    animation: headerShine 4s infinite;
+}
+
+@keyframes headerShine {
+    0% {
+        left: -120%;
+    }
+
+    45% {
+        left: 120%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+/* Entrada de tarjetas */
+.form-card,
+.detalle-card,
+.table-card {
+    animation: cardFadeUp 0.7s ease both;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@keyframes cardFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto hover en tarjetas */
+.form-card:hover,
+.detalle-card:hover,
+.table-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 45px rgba(31, 41, 55, 0.12);
+}
+
+/* Botones con efecto más vivo */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -80%;
+        width: 60%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.25);
+        transform: skewX(-20deg);
+        transition: left 0.4s ease;
+    }
+
+    .btn:hover::after {
+        left: 120%;
+    }
+
+/* Navbar animado */
+.navbar {
+    animation: navFade 0.6s ease-in-out;
+}
+
+@keyframes navFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dropdown más elegante */
+.dropdown-menu {
+    animation: dropdownFade 0.25s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Filas de tabla con movimiento suave */
+.modern-table tbody tr {
+    animation: rowFade 0.45s ease both;
+}
+
+@keyframes rowFade {
+    from {
+        opacity: 0;
+        transform: translateX(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Avatares con efecto flotante */
+.avatar {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .avatar:hover {
+        transform: scale(1.08) rotate(2deg);
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+    }
+
+/* Inputs con transición */
+.form-control,
+.form-select,
+.form-control-custom {
+    transition: all 0.25s ease;
+}
+
+    .form-control:hover,
+    .form-select:hover,
+    .form-control-custom:hover {
+        border-color: #93c5fd;
+    }
+
+/* Badges de estado */
+.status-badge {
+    display: inline-block;
+    animation: badgePop 0.45s ease;
+}
+
+@keyframes badgePop {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Efecto suave en enlaces */
+a {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+/* Corrección para que el menú desplegable quede encima del contenido */
+.navbar {
+    position: relative;
+    z-index: 2000;
+}
+
+.dropdown-menu {
+    z-index: 3000;
+}
+
+header {
+    position: relative;
+    z-index: 2000;
+}
+
+.page-header {
+    z-index: 1;
+}
+/* ==============================
+   Más color y animación visual
+   ============================== */
+
+/* Fondo con movimiento muy suave */
+body {
+    background: linear-gradient(-45deg, #eef5ff, #ecfeff, #f0f9ff, #eef2ff);
+    background-size: 400% 400%;
+    animation: animatedBackground 12s ease infinite;
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navbar con línea de color */
+.navbar {
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.08);
+}
+
+    .navbar::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, #2563eb, #14b8a6, #a855f7, #2563eb);
+        background-size: 300% 300%;
+        animation: navColorLine 5s linear infinite;
+    }
+
+@keyframes navColorLine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+/* Links del navbar con subrayado animado */
+.nav-link {
+    position: relative;
+}
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        bottom: 4px;
+        height: 2px;
+        background: linear-gradient(90deg, #2563eb, #14b8a6);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.25s ease;
+    }
+
+    .nav-link:hover::before {
+        transform: scaleX(1);
+    }
+
+/* Header con más profundidad */
+.page-header {
+    background: linear-gradient(135deg, #2563eb, #14b8a6, #8b5cf6);
+    background-size: 250% 250%;
+    animation: headerGradientMove 7s ease infinite, slideDownHeader 0.8s ease;
+}
+
+@keyframes headerGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Tarjetas con borde de color al pasar el mouse */
+.form-card,
+.detalle-card,
+.table-card {
+    position: relative;
+    overflow: hidden;
+}
+
+    .form-card::before,
+    .detalle-card::before,
+    .table-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 22px;
+        padding: 2px;
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.35), rgba(20, 184, 166, 0.35), rgba(168, 85, 247, 0.35));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .form-card:hover::before,
+    .detalle-card:hover::before,
+    .table-card:hover::before {
+        opacity: 1;
+    }
+
+    /* Títulos con toque de color */
+    .form-card h2,
+    .detalle-card h2,
+    .page-title {
+        letter-spacing: -0.5px;
+    }
+
+        .form-card h2::after,
+        .detalle-card h2::after {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 4px;
+            margin-top: 8px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #2563eb, #14b8a6);
+        }
+
+/* Dropdown más colorido */
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.dropdown-item {
+    transition: all 0.2s ease;
+}
+
+    .dropdown-item:hover {
+        transform: translateX(5px);
+        background: linear-gradient(90deg, #eaf1ff, #ecfeff);
+    }
+
+/* Botones con pulso suave */
+.btn-primary {
+    animation: softPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+    0% {
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+    }
+
+    50% {
+        box-shadow: 0 14px 28px rgba(20, 184, 166, 0.28);
+    }
+
+    100% {
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+    }
+}
+
+/* Inputs con iluminación ligera */
+.form-control:focus,
+.form-select:focus,
+.form-control-custom:focus {
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Tablas más vivas */
+.modern-table tbody tr:hover {
+    background: linear-gradient(90deg, #f8fbff, #ecfeff);
+    transform: scale(1.003);
+}
+
+/* Badges con colores más notables */
+.status-pendiente {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+}
+
+.status-confirmada {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+    color: #166534;
+}
+
+.status-cancelada {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    color: #991b1b;
+}
+
+.ca-badge-info {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: #1d4ed8;
+}
+
+/* Avatares con movimiento suave */
+.avatar {
+    animation: avatarFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes avatarFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Aparición escalonada de tarjetas */
+.form-card:nth-of-type(1),
+.detalle-card:nth-of-type(1),
+.table-card:nth-of-type(1) {
+    animation-delay: 0.05s;
+}
+
+.form-card:nth-of-type(2),
+.detalle-card:nth-of-type(2),
+.table-card:nth-of-type(2) {
+    animation-delay: 0.15s;
+}
+
+.form-card:nth-of-type(3),
+.detalle-card:nth-of-type(3),
+.table-card:nth-of-type(3) {
+    animation-delay: 0.25s;
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

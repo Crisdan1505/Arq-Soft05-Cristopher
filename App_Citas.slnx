@@ -4,4 +4,5 @@
   <Project Path="App_Citas.Domain/App_Citas.Domain.csproj" Id="797defe8-f1f2-4375-a8a4-85bf8bf410a5" />
   <Project Path="App_Citas.Infrastructure/App_Citas.Infrastructure.csproj" Id="da3d9cd9-9705-42a3-afc1-7248f32fc687" />
   <Project Path="App_Citas.Web/App_Citas.Web.csproj" Id="bab85f1e-6a57-4ec5-b1a6-edcb64fe3ca9" />
+  <Project Path="Calculadora.Api/Calculadora.Api.csproj" Id="8397231b-9531-48f7-9e7d-4638245d2214" />
 </Solution>

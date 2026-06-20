@@ -47,6 +47,9 @@ El objetivo principal de esta aplicación es demostrar la creación de un sistem
 3.<img width="1893" height="1013" alt="image" src="https://github.com/user-attachments/assets/b279c15b-06ac-4335-90dc-34639f06792f" />
 4.<img width="1895" height="918" alt="image" src="https://github.com/user-attachments/assets/f664e296-1133-4368-98b1-f54d0d848ef0" />
 5.<img width="1893" height="922" alt="image" src="https://github.com/user-attachments/assets/19f71870-3ab7-4c52-8824-9242b7d6b916" />
+Calculadora.
+1.<img width="1907" height="1012" alt="image" src="https://github.com/user-attachments/assets/2a56c4e5-7006-481d-b5bd-6ca609b3ce05" />
+
 
 
 

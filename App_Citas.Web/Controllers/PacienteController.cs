@@ -7,7 +7,11 @@ namespace App_Citas.Web.Controllers
     public class PacienteController : Controller
     {
         private readonly IPacienteRepository _repo;
-        public PacienteController(IPacienteRepository repo) { _repo = repo; }
+
+        public PacienteController(IPacienteRepository repo)
+        {
+            _repo = repo;
+        }
 
         public IActionResult Index() => View(_repo.ObtenerTodos());
 
@@ -22,7 +26,14 @@ namespace App_Citas.Web.Controllers
         [HttpPost]
         public IActionResult Crear(Paciente paciente)
         {
-            _repo.Agregar(paciente);
+            var pacienteCreado = PacienteFactory.Crear(paciente);
+
+            var repoDecorado = new PacienteRepositoryDecorator(_repo);
+            repoDecorado.Agregar(pacienteCreado);
+
+            var observador = new PacienteObserver();
+            observador.Notificar(pacienteCreado);
+
             return RedirectToAction("Index");
         }
 

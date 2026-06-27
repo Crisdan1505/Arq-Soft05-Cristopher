@@ -1,4 +1,19 @@
 # App_Citas
+##Repositorio del proyecto:https://github.com/Crisdan1505/Arq-Soft05-Cristopher.git
+
+#### Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/usuario/App_Citas.git
+```
+
+2. Abrir la solución `App_Citas.sln` en Visual Studio.
+
+3. Restaurar los paquetes NuGet.
+
+4. Ejecutar el proyecto `App_Citas.Web`.
 
 ## Arquitectura del proyecto
 

@@ -10,33 +10,31 @@ Este diagrama representa la separación entre la capa externa, la aplicación, e
 
 flowchart TD
 
-&#x20;   Usuario\["Usuario"] --> Web\["App\_Citas.Web - MVC Razor Views"]
+ Usuario\["Usuario"] --> Web\["App\_Citas.Web - MVC Razor Views"]
 
 
 
-&#x20;   Web --> Application\["App\_Citas.Application - Casos de uso y servicios"]
+   Web --> Application\["App\_Citas.Application - Casos de uso y servicios"]
 
 
 
-&#x20;   Application --> Domain\["App\_Citas.Domain - Entidades y puertos"]
+ Application --> Domain\["App\_Citas.Domain - Entidades y puertos"]
 
 
 
-&#x20;   Application --> Ports\["Interfaces y puertos"]
+ Application --> Ports\["Interfaces y puertos"]
 
-&#x20;   Ports --> Infrastructure\["App\_Citas.Infrastructure - Adaptadores y repositorios"]
-
-
-
-&#x20;   Infrastructure --> JSON\["Archivos JSON - Persistencia local"]
+Ports --> Infrastructure\["App\_Citas.Infrastructure - Adaptadores y repositorios"]
 
 
+  Infrastructure --> JSON\["Archivos JSON - Persistencia local"]
 
-&#x20;   Domain --> Paciente\["Paciente"]
 
-&#x20;   Domain --> Medico\["Medico"]
+  Domain --> Paciente\["Paciente"]
 
-&#x20;   Domain --> Cita\["Cita"]
+  Domain --> Medico\["Medico"]
+
+  Domain --> Cita\["Cita"]
 
 ```
 

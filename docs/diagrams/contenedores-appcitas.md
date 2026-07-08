@@ -10,23 +10,23 @@ Este diagrama muestra los principales contenedores o partes internas del sistema
 
 flowchart TD
 
-&#x20;   Usuario\["Usuario / Recepcionista"] --> Web\["App\_Citas.Web<br/>Interfaz MVC"]
+Usuario\["Usuario / Recepcionista"] --> Web\["App\_Citas.Web<br/>Interfaz MVC"]
 
 
 
-&#x20;   Web --> Controllers\["Controllers"]
+ Web --> Controllers\["Controllers"]
 
-&#x20;   Controllers --> Application\["App\_Citas.Application<br/>Servicios de aplicación"]
-
-
-
-&#x20;   Application --> Domain\["App\_Citas.Domain<br/>Entidades e interfaces"]
-
-&#x20;   Application --> Infrastructure\["App\_Citas.Infrastructure<br/>Repositorios JSON"]
+ Controllers --> Application\["App\_Citas.Application<br/>Servicios de aplicación"]
 
 
 
-&#x20;   Infrastructure --> Data\["Archivos JSON<br/>pacientes.json<br/>medicos.json<br/>citas.json"]
+ Application --> Domain\["App\_Citas.Domain<br/>Entidades e interfaces"]
+
+  Application --> Infrastructure\["App\_Citas.Infrastructure<br/>Repositorios JSON"]
+
+
+
+  Infrastructure --> Data\["Archivos JSON<br/>pacientes.json<br/>medicos.json<br/>citas.json"]
 
 ```
 
